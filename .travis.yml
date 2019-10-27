@@ -5,3 +5,4 @@ script:
  - mvn clean
  - mvn test
  - mvn package
+evn: CODECOV_TOKEN="36d43421-dd27-4b50-8bde-d5c6a0b93e2c"
