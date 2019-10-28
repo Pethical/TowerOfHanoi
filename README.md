@@ -12,7 +12,9 @@ Warning! This is an ineffecient and overcomplicated solution. do not follow this
 
 # Hanoi tornyai
 **A feladat:**
-Készítsünk programot java nyelven amely meg tudja oldani a "Hanoi tornyai" nevű matematikai feladványt! A megoldáshoz ne használjunk tömböket (a tornyokhoz használnjuk Stringet) és ne használjunk rekurzíót (szervezzünk ciklusokat)
+Készítsünk programot java nyelven amely meg tudja oldani a "Hanoi tornyai" nevű matematikai feladványt! A megoldáshoz ne használjunk se tömböket se listákat (a tornyokhoz használnjuk Stringet) és ne használjunk rekurzíót sem (szervezzünk ciklusokat)
+
+A program képes megoldani a problémát és bármely állapotból képes a tornyokat az utolsó toronyra halmozni (azaz a kezdő állapot tetszőleges lehet).
 
 ## Hogyan fordítsd
 A fordításhoz mavenre lesz szükséged és jdk8-ra. A következő paraccsal hozhatod létre a jar fájlt:
