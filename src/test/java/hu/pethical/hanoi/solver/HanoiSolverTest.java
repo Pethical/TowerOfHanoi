@@ -6,6 +6,7 @@
 
 package hu.pethical.hanoi.solver;
 
+import hu.pethical.hanoi.HanoiTower;
 import hu.pethical.hanoi.HanoiTowerCollection;
 import hu.pethical.common.stack.errors.InvalidStackOperationException;
 import org.junit.jupiter.api.Test;
@@ -20,6 +21,13 @@ class HanoiSolverTest {
         HanoiTowerCollection hanoiTowerCollection = new HanoiTowerCollection("ooo", "oo", "o");
         assertDoesNotThrow(() -> new HanoiSolver(hanoiTowerCollection));
         assertThrows(IllegalArgumentException.class, () -> new HanoiSolver(null));
+    }
+
+    @Test
+    void testEmptyTower(){
+        HanoiTowerCollection hanoiTowerCollection = new HanoiTowerCollection(String::compareTo);
+        HanoiSolver solver = new HanoiSolver(hanoiTowerCollection);
+        assertThrows(IllegalStateException.class, solver::solve);
     }
 
     @Test

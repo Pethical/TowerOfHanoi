@@ -41,6 +41,9 @@ class HanoiTowerTest {
         assertFalse(hanoiTower.canAccept("a"));
         hanoiTower.pop();
         assertTrue(hanoiTower.canAccept("a"));
+        hanoiTower.pop();
+        hanoiTower.push("d").push("c").push("b");
+        assertFalse(hanoiTower.canAccept("a"));
         assertThrows(IllegalArgumentException.class, ()->hanoiTower.canAccept(null));
         assertThrows(IllegalArgumentException.class, ()->hanoiTower.canAccept(""));
     }

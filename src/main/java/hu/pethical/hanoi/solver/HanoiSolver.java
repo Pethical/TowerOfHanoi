@@ -39,7 +39,7 @@ public class HanoiSolver {
     }
 
     public void solve() throws EmptyStackException, InvalidStackOperationException {
-        while (!hanoiTowerCollection.getTower1().isEmpty() || !hanoiTowerCollection.getTower2().isEmpty()) {
+        while (hanoiTowerCollection.getTower3().count()!=3) {
             step();
         }
     }

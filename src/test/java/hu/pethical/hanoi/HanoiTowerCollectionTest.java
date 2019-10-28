@@ -75,8 +75,14 @@ class HanoiTowerCollectionTest {
 
     @Test
     @Order(4)
-    void getLargestDiscTower() throws EmptyStackException {
+    void getLargestDiscTower() throws InvalidStackOperationException {
         assertEquals(collection.getLargestMovableDiscTower(), collection.getTower3());
+        HanoiTowerCollection collection = new HanoiTowerCollection(String::compareTo);
+        collection.getTower3().push("c").push("b").push("a");
+        assertEquals(collection.getLargestMovableDiscTower(), collection.getTower3());
+        collection = new HanoiTowerCollection(String::compareTo);
+        collection.getTower2().push("c").push("b").push("a");
+        assertEquals(collection.getLargestMovableDiscTower(), collection.getTower2());
     }
 
     @Test
@@ -97,4 +103,5 @@ class HanoiTowerCollectionTest {
     void testtoString() {
         assertFalse(collection.toString().isEmpty());
     }
+
 }

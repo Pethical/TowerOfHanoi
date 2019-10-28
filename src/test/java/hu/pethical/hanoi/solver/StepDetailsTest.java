@@ -22,15 +22,6 @@ class StepDetailsTest {
     }
 
     @Test
-    void testToString() throws InvalidStackOperationException {
-        HanoiTowerCollection collection = new HanoiTowerCollection(String::compareTo);
-        collection.getTower1().push("a");
-        collection.getTower2().push("b");
-        collection.getTower3().push("c");
-        assertNotNull(collection.toString());
-    }
-
-    @Test
     void getSource() {
         HanoiTowerCollection collection = new HanoiTowerCollection(String::compareTo);
         StepDetails args = new StepDetails(collection, collection.getTower1(), collection.getTower2());
@@ -49,4 +40,14 @@ class StepDetailsTest {
        assertThrows(IllegalArgumentException.class, ()-> StepDetails.setToStringTemplate(null));
        assertThrows(IllegalArgumentException.class, ()-> StepDetails.setToStringTemplate(""));
     }
+
+    @Test
+    void testToString() throws InvalidStackOperationException {
+        HanoiTowerCollection collection = new HanoiTowerCollection(String::compareTo);
+        StepDetails.setToStringTemplate("Move [%s] from [%s] to [%s]");
+        collection.getTower2().push("a");
+        StepDetails args = new StepDetails(collection, collection.getTower1(), collection.getTower2());
+        assertEquals("Move [a] from [A] to [B]", args.toString());
+    }
+
 }
