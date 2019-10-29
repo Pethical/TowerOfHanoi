@@ -20,13 +20,15 @@ A program képes megoldani a problémát és bármely állapotból képes a torn
 Ennél egyszerűbben, pár sor kóddal is meg lehet oldani. Ennek a megoldásnak a célja inkább, a java nyelv elemeinek, az OOP-nek, az egységtesztelésnek és az integrálható eszközöknek (pl. CI folyamatok) a reprezentálása.
 
 ## Hogyan fordítsd
-A fordításhoz mavenre lesz szükséged és jdk8-ra. A következő paraccsal hozhatod létre a jar fájlt:
+A fordításhoz mavenre lesz szükséged és jdk8-ra. A következő paraccsal hozhatod létre a jar fájlokat:
 ```
 mvn clean package
 ```
 ## Hogyan futtasd
 * Fordítsd le a fenti a paranccsal, vagy töltsd le a legfrissebb release-t.
-* Futtasd a towerOfHanoi-1.0-SNAPSHOT.jar fájlt
+* Futtasd a hanoiGui-1.0-SNAPSHOT.jar fájlt a grafikus programhoz
+* Futtasd a HanoiConsole-1.0-SNAPSHOT.jar fájlt a konzolos programhoz
+
 ```
 java -jar towerOfHanoi-1.0-SNAPSHOT.jar
 ```
