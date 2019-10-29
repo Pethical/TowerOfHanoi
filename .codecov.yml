@@ -1,2 +1,3 @@
 ignore:
-  - "src/main/java/hu/pethical/towerOfHanoi"
+  - "HanoiConsole/**/*"
+  - "HanoiGui/**/*"
