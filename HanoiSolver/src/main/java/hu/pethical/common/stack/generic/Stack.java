@@ -15,7 +15,7 @@ import hu.pethical.common.stack.errors.InvalidStackOperationException;
  */
 public interface Stack<T> {
 
-    Stack push(T item) throws InvalidStackOperationException;
+    Stack<T> push(T item) throws InvalidStackOperationException;
 
     T pop() throws EmptyStackException;
 

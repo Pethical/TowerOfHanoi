@@ -8,8 +8,6 @@ package hu.pethical.hanoi;
 
 import hu.pethical.common.stack.errors.EmptyStackException;
 import hu.pethical.common.stack.errors.InvalidStackOperationException;
-import hu.pethical.hanoi.HanoiTowerCollection;
-import hu.pethical.hanoi.HanoiTowerFactory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -45,19 +43,19 @@ class HanoiTowerCollectionTest {
 
     @Test
     @Order(1)
-    void getTower1() throws EmptyStackException {
+    void getTower1() {
         assertEquals(collection.getTower1().top(),"1");
     }
 
     @Test
     @Order(2)
-    void getTower2() throws EmptyStackException {
+    void getTower2() {
         assertEquals(collection.getTower2().top(),"2");
     }
 
     @Test
     @Order(3)
-    void getTower3() throws EmptyStackException {
+    void getTower3() {
         assertEquals(collection.getTower3().top(),"3");
     }
 
@@ -87,7 +85,7 @@ class HanoiTowerCollectionTest {
 
     @Test
     @Order(5)
-    void getSmallestMovableDiscTower() throws EmptyStackException {
+    void getSmallestMovableDiscTower() {
         assertEquals(collection.getSmallestMovableDiscTower(), collection.getTower1());
     }
 
@@ -100,7 +98,7 @@ class HanoiTowerCollectionTest {
     }
 
     @Test
-    void testtoString() {
+    void testToString() {
         assertFalse(collection.toString().isEmpty());
     }
 

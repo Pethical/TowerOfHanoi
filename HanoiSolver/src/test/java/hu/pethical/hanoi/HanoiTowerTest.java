@@ -5,9 +5,9 @@
  */
 
 package hu.pethical.hanoi;
+
 import hu.pethical.common.stack.errors.EmptyStackException;
 import hu.pethical.common.stack.errors.InvalidStackOperationException;
-import hu.pethical.hanoi.HanoiTower;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

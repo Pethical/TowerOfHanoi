@@ -6,15 +6,15 @@
 
 package hu.pethical.common.towers;
 
-import hu.pethical.common.stack.errors.EmptyStackException;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class StringTowerTest {
 
     @Test
-    void push() throws EmptyStackException {
+    void push() {
         Tower tower = new StringTower('_',"");
         assertEquals(0, tower.count());
         assertDoesNotThrow(()-> tower.push("b"));

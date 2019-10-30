@@ -11,7 +11,7 @@ import hu.pethical.hanoi.HanoiTowerCollection;
 
 public final class StepDetails {
 
-    private static String TOSTRING_TEMPLATE = "Moved %s from %s to %s";
+    private static String STRING_TEMPLATE = "Moved %s from %s to %s";
 
     private final HanoiTowerCollection hanoiTowerCollection;
     private final Tower source;
@@ -37,14 +37,14 @@ public final class StepDetails {
 
     @Override
     public String toString() {
-        return String.format(TOSTRING_TEMPLATE, target.top(), source.getName(), target.getName());
+        return String.format(STRING_TEMPLATE, target.top(), source.getName(), target.getName());
     }
 
     public static void setToStringTemplate(String toStringTemplate) {
         if(toStringTemplate == null || toStringTemplate.isEmpty()){
             throw new IllegalArgumentException("toStringTemplate can not be null");
         }
-        TOSTRING_TEMPLATE = toStringTemplate;
+        STRING_TEMPLATE = toStringTemplate;
     }
 
 

@@ -34,7 +34,7 @@ public abstract class GenericStackTest<T> {
     }
 
     @Test
-    void push() throws InvalidStackOperationException, EmptyStackException {
+    void push() throws InvalidStackOperationException {
         GenericStack<T> stack = new GenericStack<>(delimiter, getTypeConverter());
         T[] values = getSampleValues(2);
         assertEquals(0, stack.count());
@@ -62,7 +62,7 @@ public abstract class GenericStackTest<T> {
     }
 
     @Test
-    void top() throws InvalidStackOperationException, EmptyStackException {
+    void top() throws InvalidStackOperationException {
         GenericStack<T> stack = new GenericStack<>(delimiter, getTypeConverter());
         assertNull(stack.top());
         T[] values = getSampleValues(2);

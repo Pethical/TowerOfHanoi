@@ -6,13 +6,13 @@
 
 package hu.pethical.hanoi.solver;
 
-import hu.pethical.hanoi.HanoiTower;
-import hu.pethical.hanoi.HanoiTowerCollection;
 import hu.pethical.common.stack.errors.InvalidStackOperationException;
+import hu.pethical.hanoi.HanoiTowerCollection;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class HanoiSolverTest {
 

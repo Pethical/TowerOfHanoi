@@ -7,11 +7,10 @@
 package hu.pethical.hanoi;
 
 import hu.pethical.common.towers.ThreeTowerCollection;
-import hu.pethical.common.towers.Tower;
 
 import java.util.Comparator;
 
-public class HanoiTowerFactory implements ThreeTowerCollection.TowerFactory {
+public class HanoiTowerFactory implements ThreeTowerCollection.TowerFactory<HanoiTower> {
     private final Comparator<String> comparator;
     private String[] names = new String[] {"A","B","C"};
 
@@ -32,7 +31,7 @@ public class HanoiTowerFactory implements ThreeTowerCollection.TowerFactory {
     }
 
     @Override
-    public Tower createTower(int index) {
+    public HanoiTower createTower(int index) {
         return new HanoiTower(names[index-1], comparator);
     }
 }

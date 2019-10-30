@@ -30,7 +30,7 @@ class StringStackTest {
     }
 
     @Test
-    void push() throws InvalidStackOperationException, EmptyStackException {
+    void push() throws InvalidStackOperationException {
         StringStack stack = new StringStack(delimiter);
         assertEquals(0, stack.count());
         stack.push("b");
@@ -56,7 +56,7 @@ class StringStackTest {
     }
 
     @Test
-    void top() throws InvalidStackOperationException, EmptyStackException {
+    void top() throws InvalidStackOperationException {
         StringStack stack = new StringStack(delimiter);
         assertNull(stack.top());
         stack.push("b").push("a");

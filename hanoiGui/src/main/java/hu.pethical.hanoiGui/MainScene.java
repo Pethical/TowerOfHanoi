@@ -1,8 +1,9 @@
 /*
- * Copyright (c) 2019 i-Cell Mobilsoft Zrt. All rights reserved
- * Author: peter.nemeth
- * This code is licensed under MIT license (see LICENSE.md for details)
+ * Copyright (c) 2019 Péter Németh. All rights reserved.
+ * This work is licensed under the terms of the MIT license.
+ * For a copy, see <https://opensource.org/licenses/MIT>.
  */
+
 package hu.pethical.hanoiGui;
 
 import hu.pethical.common.stack.errors.EmptyStackException;
@@ -33,9 +34,9 @@ import javax.swing.*;
 public class MainScene extends Application {
 
     private static Button button;
-    private static Disk a = new Disk(100, 25, "a");
-    private static Disk b = new Disk(150, 25, "b");
-    private static Disk c = new Disk(200, 25, "c");
+    private static final Disk a = new Disk(100, 25, "a");
+    private static final Disk b = new Disk(150, 25, "b");
+    private static final Disk c = new Disk(200, 25, "c");
 
     private static HanoiTowerCollection hanoiTowerCollection;
 
@@ -48,9 +49,7 @@ public class MainScene extends Application {
             } catch (InvalidStackOperationException | EmptyStackException e) {
                 e.printStackTrace();
             } finally {
-                SwingUtilities.invokeLater(() -> {
-                    button.setDisable(false);
-                });
+                SwingUtilities.invokeLater(() -> button.setDisable(false));
             }
         }).start();
     }

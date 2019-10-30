@@ -17,7 +17,7 @@ public abstract class AbstractGenericStack<T> implements Stack<T> {
 
     private String stack = "";
 
-    public AbstractGenericStack(char delimiter) {
+    protected AbstractGenericStack(char delimiter) {
         this.delimiter = delimiter;
     }
 

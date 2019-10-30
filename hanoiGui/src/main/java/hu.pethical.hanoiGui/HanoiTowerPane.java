@@ -1,7 +1,7 @@
 /*
- * Copyright (c) 2019 i-Cell Mobilsoft Zrt. All rights reserved
- * Author: peter.nemeth
- * This code is licensed under MIT license (see LICENSE.md for details)
+ * Copyright (c) 2019 Péter Németh. All rights reserved.
+ * This work is licensed under the terms of the MIT license.
+ * For a copy, see <https://opensource.org/licenses/MIT>.
  */
 package hu.pethical.hanoiGui;
 
@@ -15,7 +15,7 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 
 public class HanoiTowerPane extends GridPane implements Tower {
-    private Tower tower;
+    private final Tower tower;
 
     public HanoiTowerPane(Tower tower) {
         this.tower = tower;
