@@ -10,7 +10,7 @@ import hu.pethical.common.towers.ThreeTowerCollection;
 
 import java.util.Comparator;
 
-public class HanoiTowerFactory implements ThreeTowerCollection.TowerFactory<HanoiTower> {
+public class HanoiTowerFactory implements ThreeTowerCollection.TowerFactory {
     private final Comparator<String> comparator;
     private String[] names = new String[] {"A","B","C"};
 
