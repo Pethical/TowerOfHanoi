@@ -29,3 +29,4 @@ mvn clean package
 * Futtasd a hanoiGui-1.0-SNAPSHOT.jar fájlt a grafikus programhoz
 * Futtasd a HanoiConsole-1.0-SNAPSHOT.jar fájlt a konzolos programhoz
 
+![Screenshot](https://github.com/Pethical/TowerOfHanoi/blob/master/doc/gui-screeshot.PNG?raw=true)
