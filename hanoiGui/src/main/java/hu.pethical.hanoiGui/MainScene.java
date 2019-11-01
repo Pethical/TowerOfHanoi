@@ -40,7 +40,7 @@ public class MainScene extends Application {
 
     private static HanoiTowerCollection hanoiTowerCollection;
 
-    private void start() {
+    private void solveIt() {
         button.setDisable(true);
         new Thread(() -> {
             StepDetails.setToStringTemplate("[%s] mozgatása [%s] rúdról [%s] rúdra");
@@ -98,7 +98,7 @@ public class MainScene extends Application {
 
         button = new Button();
         button.setText("Megoldás");
-        button.setOnAction((e) -> start());
+        button.setOnAction((e) -> solveIt());
         button.setAlignment(Pos.CENTER);
         border.getChildren().add(button);
 
